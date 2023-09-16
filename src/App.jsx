@@ -1,6 +1,6 @@
 import { useEffect, useState } from "react"
 import CreateTodo from "./components/CreateTodo";
-import ShowTodo from "./components/ShowTodo";
+import ReadTodo from "./components/ReadTodo";
 
 
 
@@ -40,10 +40,10 @@ function App() {
     <div>
       <h1>React To-do App</h1>
       <CreateTodo onAdd={addTodoList} />
-      <ShowTodo onEdit={editTodoList} onDelete={removeTodoList} todoList={todoList} />
-      {todoList.length>0?<button onClick={()=>setTodoList([])}>Empty</button> :''}
+      <ReadTodo onEdit={editTodoList} onDelete={removeTodoList} todoList={todoList} />
+      {todoList.length > 0 ? <button onClick={() => setTodoList([])}>Empty</button> : null}
     </div>
-  )
+  );
 }
 
 export default App
